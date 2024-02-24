@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-client-app-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todo-client-app
+  template:
+    metadata:
+      labels:
+        app: todo-client-app
+    spec:
+      containers:
+      - name: container1
+        image: gcr.io/devops-384013/todo-client-app:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: REACT_APP_baseAPIURL
+          value: "http://34.118.75.172:5000"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "200Mi"
+          limits:
+            cpu: "200m"
+            memory: "400Mi"
+      nodeSelector:
+        kubernetes.io/arch: "amd64"

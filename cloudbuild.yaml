@@ -17,7 +17,7 @@ steps:
     args: ['apply', '-f', 'YAML/']
     env:
       - 'CLOUDSDK_COMPUTE_REGION=europe-central2-a'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=project-cluster'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
 
 images:
   - 'gcr.io/devops-384013/todo-client-app:latest'

@@ -6,24 +6,24 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   tls:
-  - hosts:
-    - devops-tutorial.site
-    secretName: devops-tutorial-tls 
+    - hosts:
+        - devops-tutorial.site
+      secretName: devops-tutorial-tls
   rules:
-  - host: devops-tutorial.site
-    http:
-      paths:
-      - path: /api
-        pathType: Prefix
-        backend:
-          service:
-            name: todo-backend-service
-            port:
-              number: 3000 
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: todo-client-service
-            port:
-              number: 80
+    - host: devops-tutorial.site
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: todo-backend-service
+                port:
+                  number: 3000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: todo-client-service
+                port:
+                  number: 80

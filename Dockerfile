@@ -10,7 +10,7 @@ COPY ./public ./public
 
 COPY ./src ./src
 
-ENV REACT_APP_baseAPIURL=http://34.118.54.55:5000
+ENV REACT_APP_baseAPIURL=http://www.devops-tutorial.site
 
 RUN yarn build
 

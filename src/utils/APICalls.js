@@ -16,7 +16,7 @@ axiosInstance.interceptors.response.use(
 );
 
 export const signout = () => {
-    return axiosInstance.post(process.env.REACT_APP_baseAPIURL + '/logout').then(user => {
+    return axiosInstance.post(process.env.REACT_APP_baseAPIURL + '/api/logout').then(user => {
         // delete axiosInstance.defaults.headers.common["Authorization"];
         return user.data
     })
@@ -24,13 +24,13 @@ export const signout = () => {
 
 
 export const init = () => {
-    return axiosInstance.post('/init').then(user => {
+    return axiosInstance.post('/api/init').then(user => {
         return user.data
     })
 }
 
 export const login = (email, password) => {
-    return axiosInstance.post('/login', {
+    return axiosInstance.post('/api/login', {
         email,
         password
     }).then(user => {
@@ -40,7 +40,7 @@ export const login = (email, password) => {
 }
 
 export const signup = (name, email, password) => {
-    return axiosInstance.post('/signup', {
+    return axiosInstance.post('/api/signup', {
         name,
         email,
         password
@@ -50,7 +50,7 @@ export const signup = (name, email, password) => {
 }
 
 export const addTodo = (title, description) => {
-    return axiosInstance.post('/todo/add', {
+    return axiosInstance.post('/api/todo/add', {
         title,
         description
     }).then(todo => {
@@ -60,7 +60,7 @@ export const addTodo = (title, description) => {
 
 export const listTodo = () => {
     //I have used post instead of get, read https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
-    return axiosInstance.post('/todo/list').then(todos => {
+    return axiosInstance.post('/api/todo/list').then(todos => {
         return todos.data
     })
 }
@@ -78,7 +78,7 @@ export const updateTodo = (_id, important = null, done = null) => {
     if (done !== null) {
         fieldsToUpdate.done = done
     }
-    return axiosInstance.patch('/todo/update', fieldsToUpdate).then(todo => {
+    return axiosInstance.patch('/api/todo/update', fieldsToUpdate).then(todo => {
         return todo.data
     })
 }
@@ -86,7 +86,7 @@ export const updateTodo = (_id, important = null, done = null) => {
 
 export const deleteTodo = (_id) => {
     //I have used post instead of get, read https://blog.teamtreehouse.com/the-definitive-guide-to-get-vs-post
-    return axiosInstance.delete('/todo/delete', {
+    return axiosInstance.delete('/api/todo/delete', {
         data: {
             _id,
         }

@@ -19,6 +19,10 @@ spec:
         env:
         - name: REACT_APP_baseAPIURL
           value: "http://34.118.54.55:3000"
+        - name: NODE_ENV
+          value: production
+        - name: PUBLIC_URL
+          value: http://devops-tutorial.site
         resources:
           requests:
             cpu: "100m" 

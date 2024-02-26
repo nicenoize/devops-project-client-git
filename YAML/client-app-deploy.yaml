@@ -21,10 +21,10 @@ spec:
           value: "http://34.118.54.55:3000"
         resources:
           requests:
-            cpu: "250m" 
+            cpu: "100m" 
             memory: "200Mi"
           limits:
-            cpu: "500m"
+            cpu: "200m"
             memory: "400Mi"
       nodeSelector:
         kubernetes.io/arch: "amd64"

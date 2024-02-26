@@ -24,7 +24,7 @@ spec:
         - name: PUBLIC_URL
           value: http://devops-tutorial.site
         - name: PORT
-          number: 3000
+          value: "3000"
         resources:
           requests:
             cpu: "100m" 

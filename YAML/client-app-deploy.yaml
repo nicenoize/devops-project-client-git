@@ -23,6 +23,8 @@ spec:
           value: production
         - name: PUBLIC_URL
           value: http://devops-tutorial.site
+        - name: PORT
+          value: 3000
         resources:
           requests:
             cpu: "100m" 

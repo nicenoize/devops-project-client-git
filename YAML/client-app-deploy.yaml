@@ -18,13 +18,13 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: REACT_APP_baseAPIURL
-          value: "http://34.118.54.55:3000"
+          value: "http://34.118.54.55:5000"
         - name: NODE_ENV
           value: production
         - name: PUBLIC_URL
           value: http://devops-tutorial.site
         - name: PORT
-          value: "3000"
+          value: "5000"
         resources:
           requests:
             cpu: "100m" 

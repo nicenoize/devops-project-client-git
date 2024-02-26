@@ -2,7 +2,7 @@ steps:
   # Build the Docker image for the client app
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--platform', 'linux/amd64', '-t', 'gcr.io/devops-384013/todo-client-app:latest', '.']
-    dir: '../'
+    dir: 'devops-project-client-git'
 
   # Push the Docker image for the client app
   - name: 'gcr.io/cloud-builders/docker'

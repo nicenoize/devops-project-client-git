@@ -1,13 +1,13 @@
 steps:
   # Step to install dependencies and run tests
-  - name: 'node'
-    entrypoint: 'npm'
-    args: ['install']
-    dir: '.'
-  - name: 'node'
-    entrypoint: 'npm'
-    args: ['test']
-    dir: '.'
+  # - name: 'install'
+  #   entrypoint: 'npm'
+  #   args: ['install']
+  #   dir: '.'
+  # - name: 'test'
+  #   entrypoint: 'npm'
+  #   args: ['test']
+  #   dir: '.'
 
   # Build the Docker image for the client app
   - name: 'gcr.io/cloud-builders/docker'

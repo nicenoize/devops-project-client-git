@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # TODO CLIENT
 The code is based on the predefined TODO app (https://github.com/lucendio/lecture-devops-app)
 
